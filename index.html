@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>WHAT YOUR NAME PICTURES!</h1>
+        <div class="centreDiv">
+            <div class="details">
+                <label>Enter Details:</label><br>
+                <input type="text" name="" id="nameid">
+            </div>
+            <div class="imgdiv">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUL9QaSaPB5ZqspkBMDXBU8KWAiMw7ztdVCA&usqp=CAU" alt="" width="300" height="200" class="imgchange">
+            </div>
+            <button>CLICK HERE</button>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                const a= $('#nameid').val();
+                alert(a);
+                 $('.imgchange').attr('src',`https://joeschmoe.io/api/v1/${a}
+`);
+            });
+        });
+    </script>
+</body>
+</html>
